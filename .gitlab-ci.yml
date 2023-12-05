@@ -63,7 +63,8 @@ release-branch:
     - git checkout 'public'
     - git pull origin 'public'
     # - git stash pop
-    - git merge --squash -Xtheirs stash
+    # - git merge --squash -Xtheirs stash
+    - git checkout stash -- .
     # - git pull origin 'public'
     - git add --all
     - git commit -m "commit changes for tag ${CI_COMMIT_TAG}"
