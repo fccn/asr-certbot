@@ -52,6 +52,7 @@ release-branch:
     - ansible-galaxy install --force -r roles/requirements.yml -p ./roles
     # - echo "roles/requirements.yml" > .gitignore
     - rm roles/requirements.yml
+    - rm .gitlab-ci.yml
   script:
     - git remote set-url origin https://${CI_TOKEN_USER}:${CI_TOKEN_PASS}@gitlab.asr.fccn.pt/asr/asr-certbot.git
     - git fetch
