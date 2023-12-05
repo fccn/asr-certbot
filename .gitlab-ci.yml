@@ -61,6 +61,7 @@ release-branch:
     - git add --all
     - git stash
     - git checkout 'public'
+    - git pull origin 'public'
     # - git stash pop
     - git merge --squash -Xtheirs stash
     - git pull origin 'public'
