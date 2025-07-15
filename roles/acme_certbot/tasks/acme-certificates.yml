@@ -3,7 +3,7 @@
 - name: "Register acme account"
   command:
     cmd: "/snap/bin/certbot register -m {{ contact_email }} --server {{ acme_account['server'] }} --eab-kid {{ acme_account['mac_id'] }} --eab-hmac-key={{ acme_account['mac_key'] }} --agree-tos --non-interactive"
-    creates: /etc/letsencrypt/accounts/acme.sectigo.com
+    creates: /etc/letsencrypt/accounts/{{ acme_account['ca'] }}
 
 # Config for multiple CNs - One Single-domain per Certificate
 ##############################

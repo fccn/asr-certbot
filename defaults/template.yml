@@ -3,6 +3,7 @@ contact_email:
 
 acme_accounts: 
   - name: 
+    ca:
     server: 
     mac_id: 
     # mac_id: "{{ vault_service_mac_id }}"
@@ -11,6 +12,7 @@ acme_accounts:
 
 # acme_accounts: 
   # - name: "SERVICE NAME"
-  #   server: https://acme.sectigo.com/v2/OV
+    # ca: #cm.harica.gr   
+    # server: #https://acme-v02.harica.gr/acme/XXXXXXXXXXXXXXXXXXXXX
     # mac_id: "{{ vault_service_mac_id }}"
     # mac_key: "{{ vault_service_mac_key }}"

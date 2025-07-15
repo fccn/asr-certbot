@@ -11,8 +11,9 @@ alt_names: []
 contact_email: 
 
 acme_accounts: 
-  - name:   
-    server: #https://acme.sectigo.com/v2/OV
+  - name:
+    ca: #cm.harica.gr   
+    server: #https://acme-v02.harica.gr/acme/XXXXXXXXXXXXXXXXXXXXX
     mac_id: 
     mac_key: 
 
