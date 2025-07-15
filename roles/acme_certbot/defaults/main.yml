@@ -12,7 +12,7 @@ contact_email:
 
 acme_accounts: 
   - name:
-    ca: #cm.harica.gr   
+    ca: #acme-v02.harica.gr   
     server: #https://acme-v02.harica.gr/acme/XXXXXXXXXXXXXXXXXXXXX
     mac_id: 
     mac_key: 

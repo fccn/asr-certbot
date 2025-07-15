@@ -32,7 +32,7 @@ contact_email: <contact_fccn> #exemplo: joao.guerreiro@fccn.pt
 
 acme_accounts: 
   - name: <serviço> #exemplo: "CIENCIA ID"
-    ca: cm.harica.hr    
+    ca: acme-v02.harica.gr    
     server: https://acme-v02.harica.gr/acme/XXXXXXXXXXXXXXXXXXXXX
     mac_id: <credencial_eab_hmac_id>
     mac_key: <credencial_eab_hmac_key>
