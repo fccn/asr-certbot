@@ -112,7 +112,7 @@ upload-package:
     - ls
     - rclone config create nextcloud webdav url="${CI_WEBDAV_URL}" user="${CI_WEBDAV_USER}" pass="${CI_WEBDAV_PASSWORD}"  # Create the Rclone config for Nextcloud
     - rclone lsd --no-check-certificate nextcloud:/  # Debug: list root directories
-    - rclone lsd --no-check-certificate nextcloud:/assets/  # Debug: list root directories
+    - rclone lsd --no-check-certificate nextcloud:assets/  # Debug: list root directories
     # - rclone mkdir --no-check-certificate nextcloud:assets/acme  # Commented out for debug
     - rclone copy --no-check-certificate --retries 10 --low-level-retries 20 --timeout 2m -vv $CI_PROJECT_DIR/certbot_playbook_${CI_COMMIT_TAG}.zip nextcloud:assets/  # Try copying to assets/
   only:
