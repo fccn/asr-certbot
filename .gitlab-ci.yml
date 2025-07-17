@@ -114,6 +114,7 @@ upload-package:
     - rclone listremotes
     - 'rclone ls --no-check-certificate nextcloud:'
     - rclone lsd --no-check-certificate nextcloud:/  # Debug: list root directories
+    - 'rclone lsd --no-check-certificate nextcloud:'  # Debug: list root directories
     - rclone ls --no-check-certificate nextcloud:/assets/
     - rclone lsd --no-check-certificate nextcloud:/assets/  # Debug: list root directories
     # - rclone mkdir --no-check-certificate nextcloud:assets/acme  # Commented out for debug
