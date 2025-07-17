@@ -112,21 +112,24 @@ upload-package:
     - ls
     - rclone config create nextcloud webdav url="${CI_WEBDAV_URL}" user="${CI_WEBDAV_USER}" pass="${CI_WEBDAV_PASSWORD}"  # Create the Rclone config for Nextcloud
     - rclone listremotes
-    - 'rclone ls --no-check-certificate nextcloud:'
-    - rclone lsd --no-check-certificate nextcloud:/  # Debug: list root directories
+    # - 'rclone ls --no-check-certificate nextcloud:'
+    # - rclone lsd --no-check-certificate nextcloud:/  # Debug: list root directories
     - 'rclone lsd --no-check-certificate nextcloud:'  # Debug: list root directories
-    - rclone ls --no-check-certificate nextcloud:/assets/
-    - rclone lsd --no-check-certificate nextcloud:/assets/  # Debug: list root directories
-    - rclone ls --no-check-certificate nextcloud:assets/
-    - rclone lsd --no-check-certificate nextcloud:assets/  # Debug: list root directories
-    - rclone ls --no-check-certificate nextcloud:/assets
-    - rclone lsd --no-check-certificate nextcloud:/assets # Debug: list root directories
-    - rclone ls --no-check-certificate nextcloud:assets
-    - rclone lsd --no-check-certificate nextcloud:assets  # Debug: list root directories
-    - rclone lsf --no-check-certificate nextcloud:assets/
-    - rclone ls -vv --no-check-certificate nextcloud:assets/
-    - rclone ls --no-check-certificate --dump bodies nextcloud:assets/
+    - 'rclone lsd --no-check-certificate nextcloud:rctscertificados/'  # Debug: list root directories
+    - 'rclone lsd --no-check-certificate nextcloud:rctscertificados/assets/'  # Debug: list root directories
+    - 'rclone lsd --no-check-certificate nextcloud:rctscertificados/assets/acme'  # Debug: list root directories
+    # - rclone ls --no-check-certificate nextcloud:/assets/
+    # - rclone lsd --no-check-certificate nextcloud:/assets/  # Debug: list root directories
+    # - rclone ls --no-check-certificate nextcloud:assets/
+    # - rclone lsd --no-check-certificate nextcloud:assets/  # Debug: list root directories
+    # - rclone ls --no-check-certificate nextcloud:/assets
+    # - rclone lsd --no-check-certificate nextcloud:/assets # Debug: list root directories
+    # - rclone ls --no-check-certificate nextcloud:assets
+    # - rclone lsd --no-check-certificate nextcloud:assets  # Debug: list root directories
+    # - 'rclone lsf --no-check-certificate nextcloud:'
+    # - rclone ls -vv --no-check-certificate nextcloud:assets/
+    # - rclone ls --no-check-certificate --dump bodies nextcloud:assets/
     # - rclone mkdir --no-check-certificate nextcloud:assets/acme  # Commented out for debug
-    - rclone copy --no-check-certificate --retries 10 --low-level-retries 20 --timeout 2m -vv $CI_PROJECT_DIR/certbot_playbook_${CI_COMMIT_TAG}.zip nextcloud:/assets/  # Try copying to assets/
+    # - rclone copy --no-check-certificate --retries 10 --low-level-retries 20 --timeout 2m -vv $CI_PROJECT_DIR/certbot_playbook_${CI_COMMIT_TAG}.zip nextcloud:/assets/  # Try copying to assets/
   only:
     - tags
